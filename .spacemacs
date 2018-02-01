@@ -31,15 +31,14 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-     helm
      auto-completion
      emacs-lisp
      evil-snipe
-     helm
-     html
      git
      github
      (go :variables gofmt-command "goimports")
+     helm
+     html
      imenu-list
      javascript
      markdown
