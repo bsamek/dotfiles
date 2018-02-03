@@ -93,12 +93,6 @@ alias t=todo
 # alias fab="otp && fab"
 # alias scp="otp && scp"
 
-
-# Python virtualenvwrapper
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Devel
-source /usr/local/bin/virtualenvwrapper.sh
-
 # vi style
 # bindkey -v
 # bindkey '^P' history-search-backward
@@ -112,9 +106,6 @@ setopt NO_BEEP
 
 # GOPATH
 export GOPATH="$HOME/go"
-
-alias cr='python /Users/brian/src/10gen/kernel-tools/codereview/upload.py \-s mongodbcr.appspot.com \-\-jira_user=brian.samek \-\-email=brian.samek@mongodb.com'
-alias gerrit='/Users/brian/src/10gen/kernel-tools/codereview/gerrit.py \-\-username brian.samek'
 
 # persistent window names in tmux
 export DISABLE_AUTO_TITLE=true
