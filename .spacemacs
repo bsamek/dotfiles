@@ -342,6 +342,7 @@ you should place your code here."
   (spacemacs/set-leader-keys "oi" 'org-iswitchb)
   (spacemacs/set-leader-keys "ol" 'org-store-link)
   (add-hook 'org-capture-mode-hook 'evil-insert-state)
+  (add-hook 'org-mode-hook 'turn-on-auto-fill)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
