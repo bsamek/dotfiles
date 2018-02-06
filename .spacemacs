@@ -337,7 +337,10 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (global-hl-line-mode -1)
-  (global-set-key "\C-cb" 'org-iswitchb)
+  (spacemacs/set-leader-keys "oa" 'org-agenda)
+  (spacemacs/set-leader-keys "oc" 'org-capture)
+  (spacemacs/set-leader-keys "oi" 'org-iswitchb)
+  (spacemacs/set-leader-keys "ol" 'org-store-link)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
