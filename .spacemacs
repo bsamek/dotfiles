@@ -374,7 +374,7 @@ you should place your code here."
  '(org-stuck-projects
    (quote
     ("+PROJECT+LEVEL=2/-DONE"
-     ("COMPUTER" "ERRAND" "HOME" "LINDSEY" "READ" "WAITING")
+     ("COMPUTER" "ERRAND" "HOME" "LINDSEY" "PHONE" "READ" "WAITING")
      nil "")))
  '(package-selected-packages
    (quote
