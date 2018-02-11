@@ -371,6 +371,7 @@ you should place your code here."
      ("i" "Inbox" entry
       (file "~/Dropbox/org/inbox.org")
       "* TODO %?"))))
+ '(org-clock-mode-line-total (quote current))
  '(org-stuck-projects
    (quote
     ("+PROJECT+LEVEL=2/-DONE"
