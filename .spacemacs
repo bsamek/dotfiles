@@ -367,6 +367,12 @@ you should place your code here."
  '(org-agenda-files
    (quote
     ("~/window/ideas.org" "~/Dropbox/org/gtd.org.gpg" "~/Dropbox/org/work.org")))
+ '(org-agenda-sorting-strategy
+   (quote
+    ((agenda habit-down time-up priority-down category-keep)
+     (todo priority-down tag-up)
+     (tags time-up tag-up)
+     (search category-keep))))
  '(org-capture-templates
    (quote
     (("w" "Work" entry
