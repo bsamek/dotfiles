@@ -293,7 +293,7 @@ values."
    dotspacemacs-folding-method 'evil
    ;; If non-nil smartparens-strict-mode will be enabled in programming modes.
    ;; (default nil)
-   dotspacemacs-smartparens-strict-mode t
+   dotspacemacs-smartparens-strict-mode nil
    ;; If non-nil pressing the closing parenthesis `)' key in insert mode passes
    ;; over any automatically added closing parenthesis, bracket, quote, etc…
    ;; This can be temporary disabled by pressing `C-q' before `)'. (default nil)
@@ -357,6 +357,7 @@ you should place your code here."
  '(auth-sources (quote ("~/.authinfo.gpg")))
  '(cursor-type (quote bar))
  '(evil-want-Y-yank-to-eol nil)
+ '(exec-path-from-shell-check-startup-files nil)
  '(fci-rule-color "#3E4451" t)
  '(flycheck-checkers
    (quote
@@ -364,9 +365,7 @@ you should place your code here."
  '(helm-ag-base-command "ag --nocolor --nogroup")
  '(js-indent-level 2)
  '(js2-basic-offset 2)
- '(org-agenda-files
-   (quote
-    ("~/window/ideas.org" "~/Dropbox/org/gtd.org.gpg" "~/Dropbox/org/work.org")))
+ '(org-agenda-files (quote ("~/Dropbox/org/work.org")))
  '(org-agenda-sorting-strategy
    (quote
     ((agenda habit-down time-up priority-down category-keep)
