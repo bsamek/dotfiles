@@ -371,10 +371,10 @@ you should place your code here."
    (quote
     (("w" "Work" entry
       (file "~/Dropbox/org/work.org")
-      "* TODO %?")
+      "* %?")
      ("i" "Inbox" entry
       (file "~/Dropbox/org/inbox.org")
-      "* TODO %?"))))
+      "* %?"))))
  '(org-clock-mode-line-total (quote current))
  '(org-journal-dir "~/Dropbox/journal/")
  '(org-journal-enable-encryption t)
