@@ -363,19 +363,22 @@ you should place your code here."
  '(helm-ag-base-command "ag --nocolor --nogroup")
  '(js-indent-level 2)
  '(js2-basic-offset 2)
+ '(org-agenda-files
+   (quote
+    ("~/Dropbox/org/gtd.org.gpg" "~/Dropbox/org/work.org")))
  '(org-capture-templates
    (quote
     (("w" "Work" entry
       (file "~/Dropbox/org/work.org")
-      "* TODO %?")
+      "* %?")
      ("i" "Inbox" entry
       (file "~/Dropbox/org/inbox.org")
-      "* TODO %?"))))
+      "* %?"))))
  '(org-clock-mode-line-total (quote current))
  '(org-stuck-projects
    (quote
-    ("+PROJECT+LEVEL=2/-DONE"
-     ("COMPUTER" "ERRAND" "HOME" "LINDSEY" "PHONE" "READ" "WAITING")
+    ("+project+LEVEL=2/-DONE"
+     ("TODO" "WAITING")
      nil "")))
  '(package-selected-packages
    (quote
