@@ -75,7 +75,6 @@ values."
      base16-theme
      magithub
      oceanic-theme
-     org-journal
      seti-theme
      wc-mode
      )
