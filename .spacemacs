@@ -374,7 +374,10 @@ you should place your code here."
    (quote
     (("i" "Inbox" entry
       (file "~/Dropbox/org/inbox.org.gpg")
-      "* %?"))))
+      "* %?")
+     ("j" "journal entry" entry
+      (file+olp+datetree "~/Dropbox/org/record.org.gpg")
+      "* %U %?"))))
  '(org-clock-mode-line-total (quote current))
  '(org-journal-dir "~/Dropbox/journal/")
  '(org-journal-enable-encryption t)
