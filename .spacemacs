@@ -373,11 +373,8 @@ you should place your code here."
      (search category-keep))))
  '(org-capture-templates
    (quote
-    (("w" "Work" entry
-      (file "~/Dropbox/org/work.org")
-      "* %?")
-     ("i" "Inbox" entry
-      (file "~/Dropbox/org/inbox.org")
+    (("i" "Inbox" entry
+      (file "~/Dropbox/org/inbox.org.gpg")
       "* %?"))))
  '(org-clock-mode-line-total (quote current))
  '(org-journal-dir "~/Dropbox/journal/")
