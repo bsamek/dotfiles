@@ -364,7 +364,6 @@ you should place your code here."
  '(helm-ag-base-command "ag --nocolor --nogroup")
  '(js-indent-level 2)
  '(js2-basic-offset 2)
- '(org-agenda-files (quote ("~/Dropbox/org/work.org")))
  '(org-agenda-sorting-strategy
    (quote
     ((agenda habit-down time-up priority-down category-keep)
