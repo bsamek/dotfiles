@@ -55,7 +55,8 @@ values."
             shell-default-full-span nil
             shell-default-shell 'multi-term)
      shell-scripts
-     syntax-checking
+     (syntax-checking :variables
+                      syntax-checking-enable-by-default nil)
      systemd
      themes-megapack
      tmux
