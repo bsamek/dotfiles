@@ -559,7 +559,7 @@ This function is called at the very end of Spacemacs initialization."
  '(cursor-type (quote bar))
  '(evil-want-Y-yank-to-eol nil)
  '(exec-path-from-shell-check-startup-files nil)
- '(fci-rule-color "#3E4451" t)
+ '(fci-rule-color "#3E4451")
  '(flycheck-checkers
    (quote
     (ada-gnat asciidoctor asciidoc c/c++-clang c/c++-gcc c/c++-cppcheck cfengine chef-foodcritic coffee coffee-coffeelint coq css-csslint css-stylelint cwl d-dmd dockerfile-hadolint elixir-dogma emacs-lisp emacs-lisp-checkdoc erlang-rebar3 erlang eruby-erubis fortran-gfortran go-gofmt go-golint go-vet go-build go-test go-errcheck go-unconvert groovy haml handlebars haskell-stack-ghc haskell-ghc haskell-hlint html-tidy javascript-eslint javascript-jshint javascript-standard json-jsonlint json-python-json jsonnet less less-stylelint llvm-llc lua-luacheck lua perl perl-perlcritic php php-phpmd php-phpcs processing proselint protobuf-protoc pug puppet-parser puppet-lint python-flake8 python-pylint python-pycompile r-lintr racket rpm-rpmlint markdown-mdl nix rst-sphinx rst ruby-rubocop ruby-reek ruby-rubylint ruby ruby-jruby rust-cargo rust scala scala-scalastyle scheme-chicken scss-lint scss-stylelint sass/scss-sass-lint sass scss sh-bash sh-posix-dash sh-posix-bash sh-zsh sh-shellcheck slim slim-lint sql-sqlint systemd-analyze tcl-nagelfar tex-chktex tex-lacheck texinfo typescript-tslint verilog-verilator xml-xmlstarlet xml-xmllint yaml-jsyaml yaml-ruby)))
@@ -576,26 +576,23 @@ This function is called at the very end of Spacemacs initialization."
       nil
       ("errands.txt"))
      ("ph" "@home"
-      ((tags-todo "@errand" nil))
+      ((tags-todo "@home" nil))
       nil
       ("home.txt"))
-     ("pl" "@lindsey"
-      ((tags-todo "@errand" nil))
+     ("pa" "@agenda"
+      ((tags-todo "@agenda" nil))
       nil
-      ("lindsey.txt"))
-     ("pp" "@phone"
-      ((tags-todo "@errand" nil))
-      nil
-      ("phone.txt"))
+      ("agenda.txt"))
      ("pr" "@review"
-      ((tags-todo "@errand" nil))
+      ((tags-todo "@review" nil))
       nil
       ("review.txt"))
      ("pw" "personal waiting"
       ((todo "WAITING"
              ((org-agenda-files
                (quote
-                ("~/Dropbox/org/gtd.org.gpg")))))))
+                ("~/Dropbox/org/gtd.org.gpg"))))))
+      nil)
      ("wt" "work todo"
       ((todo "TODO"
              ((org-agenda-files
