@@ -463,18 +463,6 @@ you should place your code here."
      ("j" "journal entry" entry
       (file+olp+datetree "~/Dropbox/org/record.org.gpg")
       "* %U %?")
-     ("m" "project" entry
-      (file+headline "~/Dropbox/org/gtd.org.gpg" "Projects")
-      "* %?")
-     ("t" "task" entry
-      (file+headline "~/Dropbox/org/gtd.org.gpg" "Tasks")
-      "* TODO %?")
-     ("w" "work task" entry
-      (file+headline "~/Dropbox/org/work.org.gpg" "Tasks")
-      "* TODO %?")
-     ("e" "work project" entry
-      (file+headline "~/Dropbox/org/work.org.gpg" "Projects")
-      "* %?")
      )))
  '(org-clock-mode-line-total (quote current))
  '(org-journal-dir "~/Dropbox/journal/")
