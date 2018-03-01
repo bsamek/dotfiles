@@ -424,8 +424,6 @@ you should place your code here."
   (add-hook 'org-capture-mode-hook 'evil-insert-state)
   (add-hook 'org-mode-hook 'turn-on-auto-fill)
   (setq spaceline-org-clock-p t)
-  (setq org-projectile-file
-        "~/Dropbox/org/projectile.org")
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
