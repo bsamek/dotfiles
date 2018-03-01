@@ -117,4 +117,4 @@ export DISABLE_COVERAGE=true
 # --follow: Follow symlinks
 # --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
-export GOROOT="/usr/local/Cellar/go/1.9.2/libexec"
+export GOROOT="/usr/local/Cellar/go/1.10/libexec"
