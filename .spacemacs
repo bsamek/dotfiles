@@ -426,63 +426,6 @@ you should place your code here."
   (setq spaceline-org-clock-p t)
   )
 
-;; Do not write anything past this comment. This is where Emacs will
-;; auto-generate custom variable definitions.
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(auth-sources (quote ("~/.authinfo.gpg")))
- '(cursor-type (quote bar))
- '(evil-want-Y-yank-to-eol nil)
- '(exec-path-from-shell-check-startup-files nil)
- '(fci-rule-color "#3E4451" t)
- '(flycheck-checkers
-   (quote
-    (ada-gnat asciidoctor asciidoc c/c++-clang c/c++-gcc c/c++-cppcheck cfengine chef-foodcritic coffee coffee-coffeelint coq css-csslint css-stylelint cwl d-dmd dockerfile-hadolint elixir-dogma emacs-lisp emacs-lisp-checkdoc erlang-rebar3 erlang eruby-erubis fortran-gfortran go-gofmt go-golint go-vet go-build go-test go-errcheck go-unconvert groovy haml handlebars haskell-stack-ghc haskell-ghc haskell-hlint html-tidy javascript-eslint javascript-jshint javascript-standard json-jsonlint json-python-json jsonnet less less-stylelint llvm-llc lua-luacheck lua perl perl-perlcritic php php-phpmd php-phpcs processing proselint protobuf-protoc pug puppet-parser puppet-lint python-flake8 python-pylint python-pycompile r-lintr racket rpm-rpmlint markdown-mdl nix rst-sphinx rst ruby-rubocop ruby-reek ruby-rubylint ruby ruby-jruby rust-cargo rust scala scala-scalastyle scheme-chicken scss-lint scss-stylelint sass/scss-sass-lint sass scss sh-bash sh-posix-dash sh-posix-bash sh-zsh sh-shellcheck slim slim-lint sql-sqlint systemd-analyze tcl-nagelfar tex-chktex tex-lacheck texinfo typescript-tslint verilog-verilator xml-xmlstarlet xml-xmllint yaml-jsyaml yaml-ruby)))
- '(helm-ag-base-command "ag --nocolor --nogroup")
- '(js-indent-level 2)
- '(js2-basic-offset 2)
- '(org-agenda-files
-   (quote
-    ("~/Dropbox/org/work.org.gpg" "~/Dropbox/org/gtd.org.gpg")))
- '(org-agenda-sorting-strategy
-   (quote
-    ((agenda habit-down time-up priority-down category-keep)
-     (todo priority-down tag-up)
-     (tags time-up tag-up)
-     (search category-keep))))
- '(org-capture-templates
-   (quote
-    (("i" "Inbox" entry
-      (file "~/Dropbox/org/inbox.org.gpg")
-      "* %?")
-     ("j" "journal entry" entry
-      (file+olp+datetree "~/Dropbox/org/record.org.gpg")
-      "* %U %?")
-     )))
- '(org-clock-mode-line-total (quote current))
- '(org-journal-dir "~/Dropbox/journal/")
- '(org-journal-enable-encryption t)
- '(org-stuck-projects
-   (quote
-    ("+PROJECT+LEVEL=2/-DONE"
-     ("COMPUTER" "ERRAND" "HOME" "LINDSEY" "PHONE" "READ" "WAITING")
-     nil "")))
- '(package-selected-packages
-   (quote
-    (org-journal wc-mode helm-company helm-c-yasnippet fuzzy company-web web-completion-data company-tern company-statistics company-shell company-go company-anaconda company auto-yasnippet ac-ispell auto-complete zenburn-theme zen-and-art-theme yapfify yaml-mode xterm-color white-sand-theme web-mode web-beautify vimrc-mode underwater-theme ujelly-theme twilight-theme twilight-bright-theme twilight-anti-bright-theme toxi-theme tern tao-theme tangotango-theme tango-plus-theme tango-2-theme tagedit systemd sunny-day-theme sublime-themes subatomic256-theme subatomic-theme spacegray-theme soothe-theme solarized-theme soft-stone-theme soft-morning-theme soft-charcoal-theme smyx-theme smeargle slim-mode shell-pop seti-theme scss-mode sass-mode rvm ruby-tools ruby-test-mode rubocop rspec-mode robe reverse-theme reveal-in-osx-finder rebecca-theme rbenv ranger rake railscasts-theme pyvenv pytest pyenv-mode py-isort purple-haze-theme pug-mode professional-theme powershell planet-theme pip-requirements phoenix-dark-pink-theme phoenix-dark-mono-theme pbcopy osx-trash osx-dictionary orgit organic-green-theme org-projectile org-category-capture org-present org-pomodoro alert log4e gntp org-mime org-download omtose-phellack-theme oldlace-theme oceanic-theme occidental-theme obsidian-theme noctilux-theme naquadah-theme mustang-theme multi-term monokai-theme monochrome-theme molokai-theme moe-theme mmm-mode minitest minimal-theme material-theme markdown-toc majapahit-theme magithub markdown-mode ghub+ apiwrap magit-gitflow magit-gh-pulls madhat2r-theme lush-theme livid-mode skewer-mode simple-httpd live-py-mode light-soap-theme less-css-mode launchctl json-mode json-snatcher json-reformat js2-refactor yasnippet multiple-cursors js2-mode js-doc jbeans-theme jazz-theme ir-black-theme insert-shebang inkpot-theme imenu-list hy-mode dash-functional htmlize heroku-theme hemisu-theme helm-pydoc helm-gitignore helm-css-scss hc-zenburn-theme haml-mode gruvbox-theme gruber-darker-theme grandshell-theme gotham-theme go-guru go-eldoc go-mode gnuplot gitignore-mode github-search github-clone github-browse-file gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gist gh marshal logito pcache ht gh-md gandalf-theme flycheck-pos-tip pos-tip flycheck flatui-theme flatland-theme fish-mode farmhouse-theme exotica-theme evil-snipe evil-magit magit magit-popup git-commit ghub let-alist with-editor espresso-theme eshell-z eshell-prompt-extras esh-help engine-mode emmet-mode dracula-theme django-theme darktooth-theme autothemer darkokai-theme darkmine-theme darkburn-theme dakrone-theme dactyl-mode cython-mode cyberpunk-theme color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized coffee-mode clues-theme chruby cherry-blossom-theme busybee-theme bundler inf-ruby bubbleberry-theme birds-of-paradise-plus-theme badwolf-theme atom-one-dark-theme atom-dark-theme apropospriate-theme anti-zenburn-theme anaconda-mode pythonic ample-zen-theme ample-theme alect-themes afternoon-theme ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint indent-guide hydra hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight elisp-slime-nav dumb-jump f dash s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async)))
- '(paradox-github-token t)
- '(web-mode-code-indent-offset 2)
- '(web-mode-css-indent-offset 2)
- '(web-mode-markup-indent-offset 2))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
 (defun dotspacemacs/emacs-custom-settings ()
   "Emacs custom settings.
 This is an auto-generated function, do not modify its content directly, use
