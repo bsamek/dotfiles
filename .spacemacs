@@ -449,60 +449,15 @@ This function is called at the very end of Spacemacs initialization."
  '(js2-basic-offset 2)
  '(org-agenda-custom-commands
    (quote
-    (("a" "AGENDA"
-      ((todo "AGENDA"
-             ((org-agenda-files
-               (quote
-                ("~/Dropbox/org/gtd.org.gpg"))))))
-      nil)
-     ("c" "COMPUTER"
-      ((todo "COMPUTER"
-             ((org-agenda-files
-               (quote
-                ("~/Dropbox/org/gtd.org.gpg"))))))
-      nil)
-     ("e" "ERRAND"
-      ((todo "ERRAND"
-             ((org-agenda-files
-               (quote
-                ("~/Dropbox/org/gtd.org.gpg"))))))
-      nil)
-     ("h" "HOME"
-      ((todo "HOME"
-             ((org-agenda-files
-               (quote
-                ("~/Dropbox/org/gtd.org.gpg"))))))
-      nil)
-     ("r" "REVIEW"
-      ((todo "REVIEW"
-             ((org-agenda-files
-               (quote
-                ("~/Dropbox/org/gtd.org.gpg"))))))
-      nil)
-     ("w" "WAITING"
-      ((todo "WAITING"
-             ((org-agenda-files
-               (quote
-                ("~/Dropbox/org/gtd.org.gpg"))))))
-      nil)
-     ("ma" "WORK-AGENDA"
-      ((todo "AGENDA"
-             ((org-agenda-files
-               (quote
-                ("~/Dropbox/org/work.org.gpg"))))))
-      nil)
-     ("mc" "WORK-COMPUTER"
-      ((todo "COMPUTER"
-             ((org-agenda-files
-               (quote
-                ("~/Dropbox/org/work.org.gpg"))))))
-      nil)
-     ("mw" "WORK-WAITING"
-      ((todo "WAITING"
-             ((org-agenda-files
-               (quote
-                ("~/Dropbox/org/work.org.gpg"))))))
-      nil))))
+    (("p" "personal" alltodo ""
+      ((org-agenda-files
+        (quote
+         ("~/Dropbox/org/gtd.org.gpg")))))
+     ("w" "work" alltodo ""
+      ((org-agenda-files
+        (quote
+         ("~/Dropbox/org/work.org.gpg")))))
+     ("f" "full" alltodo "" nil))))
  '(org-agenda-files
    (quote
     ("~/Dropbox/org/work.org.gpg" "~/Dropbox/org/gtd.org.gpg")))
@@ -546,5 +501,5 @@ This function is called at the very end of Spacemacs initialization."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:background nil)))))
 )
