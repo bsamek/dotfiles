@@ -486,7 +486,7 @@ This function is called at the very end of Spacemacs initialization."
  '(org-refile-use-outline-path (quote file))
  '(org-stuck-projects
    (quote
-    ("+PROJECT+LEVEL=2/-DONE"
+    ("+project+LEVEL=2/-DONE"
      ("COMPUTER" "ERRAND" "HOME" "LINDSEY" "PHONE" "READ" "WAITING")
      nil "")))
  '(package-selected-packages
