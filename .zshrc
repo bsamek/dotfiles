@@ -82,6 +82,7 @@ alias vim=/usr/local/bin/vim
 alias mux=tmuxinator
 alias s="rg -g !vendor/ -t go"
 alias e="emacsclient -a '' -t"
+alias a="z evergreen"
 # alias ssh="otp && ssh"
 # alias fab="otp && fab"
 # alias scp="otp && scp"
