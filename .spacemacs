@@ -478,7 +478,7 @@ This function is called at the very end of Spacemacs initialization."
       (file "~/Dropbox/org/personal.org.gpg")
       "* %?" :prepend t))))
  '(org-outline-path-complete-in-steps nil)
- '(org-refile-targets (quote ((org-agenda-files :maxlevel . 2))))
+ '(org-refile-targets (quote ((org-agenda-files :maxlevel . 3))))
  '(org-refile-use-outline-path (quote file))
  '(org-stuck-projects
    (quote
