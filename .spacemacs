@@ -447,18 +447,25 @@ This function is called at the very end of Spacemacs initialization."
    [unspecified "#2b303b" "#bf616a" "#a3be8c" "#ebcb8b" "#8fa1b3" "#b48ead" "#8fa1b3" "#c0c5ce"])
  '(evil-want-Y-yank-to-eol nil)
  '(js-indent-level 2)
- '(org-outline-path-complete-in-steps nil)
- '(org-refile-targets (quote ((org-agenda-files :maxlevel . 2))))
- '(org-refile-use-outline-path (quote file))
- '(org-agenda-sorting-strategy
-       (quote
-             ((agenda habit-down time-up priority-down category-keep)
-                    (todo priority-down todo-state-up tag-up)
-                    (tags time-up tag-up)
-                    (search category-keep))))
+ '(org-agenda-custom-commands
+   (quote
+    (("p" "personal" alltodo ""
+      ((org-agenda-files
+        (quote
+         ("~/Dropbox/org/personal.org.gpg")))))
+     ("w" "work" alltodo ""
+      ((org-agenda-files
+        (quote
+         ("~/Dropbox/org/evergreen.org.gpg"))))))))
  '(org-agenda-files
    (quote
     ("~/Dropbox/org/personal.org.gpg" "~/Dropbox/org/evergreen.org.gpg")))
+ '(org-agenda-sorting-strategy
+   (quote
+    ((agenda habit-down time-up priority-down category-keep)
+     (todo priority-down todo-state-up tag-up)
+     (tags time-up tag-up)
+     (search category-keep))))
  '(org-capture-templates
    (quote
     (("j" "journal" entry
@@ -470,6 +477,9 @@ This function is called at the very end of Spacemacs initialization."
      ("p" "personal" entry
       (file "~/Dropbox/org/personal.org.gpg")
       "* %?" :prepend t))))
+ '(org-outline-path-complete-in-steps nil)
+ '(org-refile-targets (quote ((org-agenda-files :maxlevel . 2))))
+ '(org-refile-use-outline-path (quote file))
  '(org-stuck-projects
    (quote
     ("+LEVEL=3+project"
