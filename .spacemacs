@@ -459,7 +459,7 @@ This function is called at the very end of Spacemacs initialization."
          ("~/Dropbox/org/evergreen.org.gpg"))))))))
  '(org-agenda-files
    (quote
-    ("~/Dropbox/org/personal.org.gpg" "~/Dropbox/org/evergreen.org.gpg")))
+    ("~/Dropbox/org/evergreen.org.gpg" "~/Dropbox/org/personal.org.gpg")))
  '(org-agenda-sorting-strategy
    (quote
     ((agenda habit-down time-up priority-down category-keep)
@@ -471,7 +471,7 @@ This function is called at the very end of Spacemacs initialization."
     (("j" "journal" entry
       (file "~/Dropbox/org/journal.org.gpg")
       "* %T %?" :prepend t)
-     ("e" "evergreen" entry
+     ("w" "evergreen" entry
       (file+headline "~/Dropbox/org/evergreen.org.gpg" "To Do")
       "* %?" :prepend t)
      ("p" "personal" entry
@@ -482,7 +482,7 @@ This function is called at the very end of Spacemacs initialization."
  '(org-refile-use-outline-path (quote file))
  '(org-stuck-projects
    (quote
-    ("+LEVEL=3+project"
+    ("+LEVEL=2+todo"
      ("AGENDA" "COMPUTER" "ERRAND" "HOME" "PHONE" "READ" "TODO")
      nil "")))
  '(package-selected-packages
