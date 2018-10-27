@@ -472,10 +472,10 @@ This function is called at the very end of Spacemacs initialization."
       (file "~/Dropbox/org/journal.org.gpg")
       "* %T %?" :prepend t)
      ("e" "evergreen" entry
-      (file "~/Dropbox/org/evergreen.org.gpg")
+      (file+headline "~/Dropbox/org/evergreen.org.gpg" "To Do")
       "* %?" :prepend t)
      ("p" "personal" entry
-      (file "~/Dropbox/org/personal.org.gpg")
+      (file+headline "~/Dropbox/org/personal.org.gpg" "To Do")
       "* %?" :prepend t))))
  '(org-outline-path-complete-in-steps nil)
  '(org-refile-targets (quote ((org-agenda-files :maxlevel . 3))))
