@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/brian/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -77,12 +77,12 @@ export EDITOR='emacsclient -t'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias vi=/usr/local/bin/vim
-alias vim=/usr/local/bin/vim
-alias mux=tmuxinator
-alias s="rg -g !vendor/ -t go"
-alias e="emacsclient -a '' -t"
-alias a="z evergreen"
+# alias vi=/usr/local/bin/vim
+# alias vim=/usr/local/bin/vim
+# alias mux=tmuxinator
+# alias s="rg -g !vendor/ -t go"
+# alias e="emacsclient -a '' -t"
+# alias a="z evergreen"
 # alias ssh="otp && ssh"
 # alias fab="otp && fab"
 # alias scp="otp && scp"
