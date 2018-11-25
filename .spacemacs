@@ -442,8 +442,10 @@ This function is called at the very end of Spacemacs initialization."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ansi-color-faces-vector
+   [default default default italic underline success warning error])
  '(ansi-term-color-vector
-   [unspecified "#2b303b" "#bf616a" "#a3be8c" "#ebcb8b" "#8fa1b3" "#b48ead" "#8fa1b3" "#c0c5ce"])
+   [unspecified "#2b303b" "#bf616a" "#a3be8c" "#ebcb8b" "#8fa1b3" "#b48ead" "#8fa1b3" "#c0c5ce"] t)
  '(evil-want-Y-yank-to-eol nil)
  '(js-indent-level 2)
  '(org-agenda-custom-commands
@@ -482,7 +484,7 @@ This function is called at the very end of Spacemacs initialization."
  '(org-stuck-projects
    (quote
     ("+LEVEL=2+todo"
-     ("AGENDA" "COMPUTER" "ERRAND" "HOME" "PHONE" "READ" "TODO")
+     ("AGENDA" "COMPUTER" "ERRAND" "HOME" "PHONE" "READ" "TODO" "WAITING")
      nil "")))
  '(package-selected-packages
    (quote
