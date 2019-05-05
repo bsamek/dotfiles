@@ -471,7 +471,7 @@ This function is called at the very end of Spacemacs initialization."
    (quote
     (("j" "journal" entry
       (file "~/Dropbox/org/journal.org.gpg")
-      "* %T %?" :prepend t)
+      "* %t %?" :prepend t)
      ("w" "evergreen" entry
       (file+headline "~/Dropbox/org/evergreen.org.gpg" "Tasks")
       "* %?" :prepend t)
