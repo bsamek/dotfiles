@@ -486,6 +486,7 @@ This function is called at the very end of Spacemacs initialization."
    (quote
     (org-bbdb org-bibtex org-docview org-gnus org-info org-irc org-mhe org-rmail org-w3m org-checklist)))
  '(org-outline-path-complete-in-steps nil)
+ '(org-priority-start-cycle-with-default nil)
  '(org-refile-targets (quote ((org-agenda-files :maxlevel . 3))))
  '(org-refile-use-outline-path (quote file))
  '(org-stuck-projects
