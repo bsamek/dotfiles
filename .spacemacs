@@ -482,13 +482,16 @@ This function is called at the very end of Spacemacs initialization."
       (file+headline "~/Dropbox/org/personal.org.gpg" "Tasks")
       "* %?" :prepend t))))
  '(org-catch-invisible-edits (quote show))
+ '(org-modules
+   (quote
+    (org-bbdb org-bibtex org-docview org-gnus org-info org-irc org-mhe org-rmail org-w3m org-checklist)))
  '(org-outline-path-complete-in-steps nil)
  '(org-refile-targets (quote ((org-agenda-files :maxlevel . 3))))
  '(org-refile-use-outline-path (quote file))
  '(org-stuck-projects
    (quote
     ("+LEVEL=2+todo"
-     ("TODO" "AGENDA" "WAITING")
+     ("TODO" "COMPUTER" "HOME" "READ" "AGENDA" "WAITING")
      nil "")))
  '(package-selected-packages
    (quote
