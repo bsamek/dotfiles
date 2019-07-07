@@ -492,7 +492,7 @@ This function is called at the very end of Spacemacs initialization."
  '(org-stuck-projects
    (quote
     ("+LEVEL=2+todo"
-     ("TODO" "COMPUTER" "ERRAND" "HOME" "READ" "AGENDA" "WAITING")
+     ("TODO" "COMPUTER" "DAILY" "ERRAND" "HOME" "READ" "AGENDA" "WAITING")
      nil "")))
  '(package-selected-packages
    (quote
