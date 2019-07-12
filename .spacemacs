@@ -470,7 +470,7 @@ This function is called at the very end of Spacemacs initialization."
  '(org-capture-templates
    (quote
     (("r" "record" entry
-      (file+olp+datetree "~/Dropbox/org/evergreen.org.gpg" "Journal")
+      (file+olp+datetree "~/Dropbox/org/evergreen.org.gpg" "Record")
       "* %?")
      ("j" "journal" entry
       (file+olp+datetree "~/Dropbox/org/personal.org.gpg" "Journal")
