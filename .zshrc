@@ -1,5 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/go/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -70,7 +71,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z fzf web-search)
+plugins=(git z web-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,3 +100,14 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+export KUBECONFIG=~/.kube/config-staging:~/.kube/config-prod
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+FZF_DEFAULT_COMMAND="fd -t file -L -H -E .git/"
+FZF_CTRL_T_COMMAND="fd -L -H -E .git/"
+FZF_ALT_C_COMMAND="fd -t directory -L -E .git/"
+
+alias l='exa -lbF --sort=modified --git'                                               # list, size, type, git
+alias lt='exa -lbFT --sort=modified --git'                                             # list, size, type, git
