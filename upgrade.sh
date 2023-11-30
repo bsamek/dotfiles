@@ -68,7 +68,7 @@ asdf install golang latest
 asdf global golang latest
 asdf reshim golang latest
 
-mkdir ~/src/evergreen
+mkdir -p ~/src/evergreen
 pushd ~/src/evergreen
 asdf install golang latest:1.20
 asdf local golang latest:1.20
