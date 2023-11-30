@@ -1,12 +1,36 @@
 #!/usr/bin/env zsh
+
+# This script upgrades your development machine.
+#
+# This script works on Linux and MacOS. It checks that the following are
+# installed. If they are not, it exits without making any changes:
+#
+# 1. brew (only on MacOS)
+# 2. asdf
+# 3. fzf
+# 4. oh-my-zsh
+#
+# It also validates that ~/.zshrc is a symbolic link, since it assumes you have
+# your ~/.zshrc in a git repository and will symlink it.
+#
+# If all the requirements are present, it upgrades the following:
+#
+# 1. brew (only on MacOS)
+# 2. asdf
+# 3. latest python, nodejs, and golang for asdf
+# 4. latest golang 1.20 for ~/src/evergreen, creating the directory if it doesn't exist
+
 set -eu
 
 echo "\nchecking requirements..."
 
-if ! command -v brew > /dev/null 2>&1; then
-    echo "brew not found, please install brew"
-    exit 1
+if [[ "$(uname)" == "Darwin" ]]; then
+    if ! command -v brew > /dev/null 2>&1; then
+        echo "brew not found, please install brew"
+        exit 1
+    fi
 fi
+
 if ! command -v asdf > /dev/null 2>&1; then
     echo "asdf not found, please install asdf"
     exit 1
@@ -24,8 +48,10 @@ if [[ ! -L ~/.zshrc ]]; then
     exit 1
 fi
 
-echo "\nupgrading brew..."
-brew upgrade
+if [[ "$(uname)" == "Darwin" ]]; then
+    echo "\nupgrading brew..."
+    brew upgrade
+fi
 
 echo "\nupgrading asdf..."
 asdf update
@@ -42,7 +68,8 @@ asdf install golang latest
 asdf global golang latest
 asdf reshim golang latest
 
-pushd /Users/brian/src/evergreen
+mkdir ~/src/evergreen
+pushd ~/src/evergreen
 asdf install golang latest:1.20
 asdf local golang latest:1.20
 asdf reshim golang latest:1.20
