@@ -1,10 +1,16 @@
+source ~/antigen.zsh
+
 export ZSH="$HOME/.oh-my-zsh"
+antigen use oh-my-zsh
 
-ZSH_THEME="robbyrussell"
+antigen bundle asdf
+antigen bundle fzf
+antigen bundle git
+antigen bundle z
 
-plugins=(git z asdf fzf)
+antigen theme robbyrussell
 
-source $ZSH/oh-my-zsh.sh
+antigen apply
 
 export KUBECONFIG=~/.kube/config-staging:~/.kube/config-prod
 source /Users/brian/.config/op/plugins.sh
