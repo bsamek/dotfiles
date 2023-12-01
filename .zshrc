@@ -2,9 +2,11 @@ source ~/antigen.zsh
 
 antigen use oh-my-zsh
 
+antigen bundle aliases
 antigen bundle asdf
 antigen bundle fzf
 antigen bundle git
+antigen bundle ripgrep
 antigen bundle z
 
 antigen bundle marlonrichert/zsh-autocomplete@main
