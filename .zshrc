@@ -1,11 +1,16 @@
 source ~/antigen.zsh
 
 antigen use oh-my-zsh
+
 antigen bundle asdf
 antigen bundle fzf
 antigen bundle git
 antigen bundle z
+
+antigen bundle marlonrichert/zsh-autocomplete@main
+
 antigen theme robbyrussell
+
 antigen apply
 
 alias efab="fab -r /Users/brian/src/kernel-tools/evergreen"
