@@ -4,8 +4,8 @@ antigen use oh-my-zsh
 
 antigen bundle aliases
 antigen bundle asdf
+antigen bundle atuinsh/atuin@main
 antigen bundle git
-antigen bundle fzf
 antigen bundle ripgrep
 antigen bundle z
 
