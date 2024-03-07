@@ -77,3 +77,9 @@ popd
 
 echo "\nupgrading zsh..."
 "$ZSH/tools/upgrade.sh"
+
+echo "\refreshing k8s..."
+kubectl config use-context api.staging.corp.mongodb.com
+kubectl get pods
+kubectl config use-context api.prod.corp.mongodb.com
+kubectl get pods
