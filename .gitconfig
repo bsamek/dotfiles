@@ -1,6 +1,7 @@
 [user]
 	name = Brian Samek
 	email = brian.samek@mongodb.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAHhn/8y7u/eIV3Uh8cebOmLklKZaHCO5QpWVwr8XcBk
 [rerere]
 	enabled = true
 [branch]
@@ -13,3 +14,9 @@
 	defaultBranch = main
 [rebase]
 	updateRefs = true
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+	gpgsign = true
