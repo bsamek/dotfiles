@@ -19,6 +19,5 @@ antigen apply
 export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
 export ZSH="$HOME/.oh-my-zsh"
 source /Users/brian.samek/.config/op/plugins.sh
-alias efab="fab -r /Users/brian.samek/src/kernel-tools/evergreen"
 alias deploy="/Users/brian.samek/src/kernel-tools/evergreen/evergreen-deploys.py"
 alias version="paste <(kubectl get pods) <(kubectl get pods -o custom-columns='VERSION_ID:.metadata.labels.evergreen/version,GIT-REVISION:.metadata.labels.evergreen/revision')"
