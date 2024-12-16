@@ -20,3 +20,13 @@
 	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
 [commit]
 	gpgsign = true
+[scalar]
+	repo = /Users/brian.samek/src/mms
+	repo = /Users/brian.samek/src/mongo
+	repo = /Users/brian.samek/src/evergreen
+	repo = /Users/brian.samek/src/ui
+[maintenance]
+	repo = /Users/brian.samek/src/mms
+	repo = /Users/brian.samek/src/mongo
+	repo = /Users/brian.samek/src/evergreen
+	repo = /Users/brian.samek/src/ui
