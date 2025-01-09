@@ -54,9 +54,6 @@ if [[ "$(uname)" == "Darwin" ]]; then
     brew upgrade
 fi
 
-echo "\nupgrading asdf..."
-asdf update
-
 asdf install python latest
 asdf global python latest
 asdf reshim python latest
