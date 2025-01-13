@@ -66,12 +66,5 @@ asdf install golang latest
 asdf global golang latest
 asdf reshim golang latest
 
-mkdir -p ~/src/evergreen
-pushd ~/src/evergreen
-asdf install golang latest:1.20
-asdf local golang latest:1.20
-asdf reshim golang latest:1.20
-popd
-
 echo "\nupgrading zsh..."
 "$ZSH/tools/upgrade.sh"
