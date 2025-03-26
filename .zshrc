@@ -8,9 +8,6 @@ antigen bundle git
 antigen bundle ripgrep
 antigen bundle z
 
-# has to come after fzf to clobber ctrl-r
-antigen bundle atuinsh/atuin@main
-
 antigen theme robbyrussell
 
 antigen apply
