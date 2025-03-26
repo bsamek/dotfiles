@@ -18,4 +18,5 @@ source /Users/brian.samek/.config/op/plugins.sh
 alias deploy="/Users/brian.samek/src/kernel-tools/evergreen/evergreen-deploys.py"
 alias version="paste <(kubectl get pods) <(kubectl get pods -o custom-columns='VERSION_ID:.metadata.labels.evergreen/version,GIT-REVISION:.metadata.labels.evergreen/revision')"
 alias db="/Users/brian.samek/src/kernel-tools/evergreen/db_access.py"
-export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+export PATH="$PATH:$HOME/go/bin"
+alias python="python3"
