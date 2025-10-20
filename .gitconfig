@@ -30,3 +30,7 @@
 	repo = /Users/brian.samek/src/mongo
 	repo = /Users/brian.samek/src/evergreen
 	repo = /Users/brian.samek/src/ui
+[push]
+	autoSEtupRemote = true
+[core]
+	excludesfile = /Users/brian.samek/.gitignore_global
