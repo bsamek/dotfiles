@@ -1,22 +1,36 @@
-source ~/antigen.zsh
+# PATH / Environment
+[[ -f "$HOME/.local/bin/env" ]] && . "$HOME/.local/bin/env"
+export PATH="$HOME/.local/bin:$PATH"
 
-antigen use oh-my-zsh
+# Tool initialization
+eval "$(zoxide init zsh)"
+eval "$(direnv hook zsh)"
+eval "$(atuin init zsh)"
 
-antigen bundle aliases
-antigen bundle fzf
-antigen bundle git
-antigen bundle ripgrep
-antigen bundle z
+# tmux: auto-attach on SSH login
+if [[ -n "$SSH_CONNECTION" && -z "$TMUX" ]]; then
+  tmux new-session -A -s main
+fi
 
-antigen theme robbyrussell
+alias tm='tmux new-session -A -s main'
+alias mosh-mini='mosh --server=/opt/homebrew/bin/mosh-server mini'
 
-antigen apply
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
-export ZSH="$HOME/.oh-my-zsh"
-# source /Users/brian.samek/.config/op/plugins.sh
-alias deploy="/Users/brian.samek/src/kernel-tools/evergreen/evergreen-deploys.py"
-alias version="paste <(kubectl get pods) <(kubectl get pods -o custom-columns='VERSION_ID:.metadata.labels.evergreen/version,GIT-REVISION:.metadata.labels.evergreen/revision')"
-alias db="/Users/brian.samek/src/kernel-tools/evergreen/db_access.py"
-export PATH="$PATH:$HOME/go/bin"
-alias python="python3"
+# Sync repos between machines
+reposync() {
+  local repo="$1" direction="$2" host="${3:-mini}"
+  if [[ -z "$repo" || ( "$direction" != "pull" && "$direction" != "push" ) ]]; then
+    echo "Usage: reposync <repo> <pull|push> [host]"
+    return 1
+  fi
+  local local_dir="$HOME/src/$repo/"
+  local remote_dir="~/src/$repo/"
+  if [[ "$direction" == "pull" ]]; then
+    mkdir -p "$HOME/src/$repo"
+    rsync -az --delete "$host:$remote_dir" "$local_dir"
+  elif [[ "$direction" == "push" ]]; then
+    ssh "$host" "mkdir -p ~/src/$repo"
+    rsync -az --delete "$local_dir" "$host:$remote_dir"
+  fi
+}
