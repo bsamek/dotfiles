@@ -14,6 +14,9 @@ fi
 
 alias tm='tmux new-session -A -s main'
 alias mosh-mini='mosh --server=/opt/homebrew/bin/mosh-server mini'
+alias cc-skip='claude --dangerously-skip-permissions'
+alias cc-chrome='claude --chrome'
+alias cc-both='claude --dangerously-skip-permissions --chrome'
 
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
