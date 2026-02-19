@@ -28,6 +28,7 @@ alias mosh-mini='mosh --server=/opt/homebrew/bin/mosh-server mini'
 alias cc-skip='claude --dangerously-skip-permissions'
 alias cc-chrome='claude --chrome'
 alias cc-both='claude --dangerously-skip-permissions --chrome'
+alias cc='claude --dangerously-skip-permissions --chrome'
 
 # zsh-autosuggestions (homebrew)
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
