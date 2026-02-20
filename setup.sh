@@ -30,6 +30,9 @@ fi
 echo "Symlinking dotfiles..."
 ln -sf "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
 ln -sf "$DOTFILES_DIR/.tmux.conf" "$HOME/.tmux.conf"
+ln -sf "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig"
+ln -sf "$DOTFILES_DIR/.gitconfig-personal" "$HOME/.gitconfig-personal"
+ln -sf "$DOTFILES_DIR/.gitconfig-work" "$HOME/.gitconfig-work"
 
 # Ensure .zprofile has brew shellenv (needed for non-interactive shells)
 if [[ ! -f "$HOME/.zprofile" ]] || ! grep -q 'brew shellenv' "$HOME/.zprofile"; then
@@ -44,5 +47,5 @@ fi
 echo ""
 echo "Done! Open a new terminal to start using the config."
 echo ""
-echo "NOTE: .gitconfig is machine-specific and not symlinked."
-echo "Copy $DOTFILES_DIR/.gitconfig and adjust paths/identity as needed."
+echo "NOTE: Review git config paths as needed."
+echo "Update $HOME/.gitconfig-work repo paths for this machine."
