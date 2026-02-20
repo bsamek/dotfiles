@@ -1,0 +1,10 @@
+[scalar]
+	repo = ~/src/mms
+	repo = ~/src/mongo
+	repo = ~/src/evergreen
+	repo = ~/src/ui
+[maintenance]
+	repo = ~/src/mms
+	repo = ~/src/mongo
+	repo = ~/src/evergreen
+	repo = ~/src/ui

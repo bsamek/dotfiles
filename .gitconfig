@@ -1,7 +1,5 @@
 [user]
 	name = Brian Samek
-	email = brian.samek@mongodb.com
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAHhn/8y7u/eIV3Uh8cebOmLklKZaHCO5QpWVwr8XcBk
 [rerere]
 	enabled = true
 [branch]
@@ -14,23 +12,21 @@
 	defaultBranch = main
 [rebase]
 	updateRefs = true
-[gpg]
-	format = ssh
-[gpg "ssh"]
-	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
-[commit]
-	gpgsign = true
-[scalar]
-	repo = /Users/brian.samek/src/mms
-	repo = /Users/brian.samek/src/mongo
-	repo = /Users/brian.samek/src/evergreen
-	repo = /Users/brian.samek/src/ui
-[maintenance]
-	repo = /Users/brian.samek/src/mms
-	repo = /Users/brian.samek/src/mongo
-	repo = /Users/brian.samek/src/evergreen
-	repo = /Users/brian.samek/src/ui
 [push]
-	autoSEtupRemote = true
+	autoSetupRemote = true
 [core]
-	excludesfile = /Users/brian.samek/.gitignore_global
+	excludesfile = ~/.gitignore_global
+
+# Default to personal identity/signing everywhere.
+[include]
+	path = ~/.gitconfig-personal
+
+# Apply work-only repo maintenance settings in specific work repos.
+[includeIf "gitdir:~/src/mms/"]
+	path = ~/.gitconfig-work
+[includeIf "gitdir:~/src/mongo/"]
+	path = ~/.gitconfig-work
+[includeIf "gitdir:~/src/evergreen/"]
+	path = ~/.gitconfig-work
+[includeIf "gitdir:~/src/ui/"]
+	path = ~/.gitconfig-work
