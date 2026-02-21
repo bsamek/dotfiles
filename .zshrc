@@ -24,7 +24,7 @@ fi
 
 # Aliases
 alias tm='tmux new-session -A -s main'
-alias mosh-mini='mosh --server=/opt/homebrew/bin/mosh-server mini'
+alias mini='mosh --server=/opt/homebrew/bin/mosh-server mini'
 alias cc-skip='claude --allow-dangerously-skip-permissions'
 alias cc-chrome='claude --chrome'
 alias cc-both='claude --allow-dangerously-skip-permissions --chrome'
