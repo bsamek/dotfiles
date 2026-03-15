@@ -23,7 +23,13 @@ if [[ -n "$SSH_CONNECTION" && -z "$TMUX" ]]; then
 fi
 
 # Aliases
-alias tm='tmux new-session -A -s main'
+tm() {
+  if [[ "$TERM_PROGRAM" == "iTerm.app" ]]; then
+    tmux -CC new-session -A -s main
+  else
+    tmux new-session -A -s main
+  fi
+}
 alias mini='mosh --server=/opt/homebrew/bin/mosh-server mini'
 alias cc='claude --allow-dangerously-skip-permissions --chrome'
 
