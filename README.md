@@ -20,6 +20,7 @@ This installs Homebrew (if needed), CLI tools, oh-my-zsh, and symlinks `.zshrc`,
 | `.gitconfig` | Yes | Shared defaults + include rules |
 | `.gitconfig-personal` | Yes | Default identity/signing (GitHub noreply + SSH signing) |
 | `.gitconfig-work` | Yes | Work-only scalar/maintenance repos |
+| `pi/settings.json` | Yes | Pi model defaults, TUI prefs, and installed extension packages |
 
 ## Manual steps after setup
 
@@ -27,3 +28,8 @@ This installs Homebrew (if needed), CLI tools, oh-my-zsh, and symlinks `.zshrc`,
   - `setup.sh` symlinks `.gitconfig`, `.gitconfig-personal`, and `.gitconfig-work` into your home directory.
   - Update any machine-specific paths as needed in `~/.gitconfig-work` (`scalar`/`maintenance` repo paths).
 - **SSH keys / 1Password**: Git signing requires 1Password SSH agent — install 1Password and enable the SSH agent.
+- **Pi credentials**: `setup.sh` symlinks `pi/settings.json` to `~/.pi/agent/settings.json`,
+  but provider credentials are deliberately **not** tracked here. Run `pi` and add each
+  provider's API key/oauth on a new machine; keys live in `~/.pi/agent/auth.json`.
+- **Pi extensions**: live in the separate [pi-customizations](https://github.com/bsamek/pi-customizations)
+  repo, cloned to `~/src/pi-customizations` by `setup.sh` and referenced from `pi/settings.json`.
