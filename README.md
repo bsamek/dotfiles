@@ -32,4 +32,6 @@ This installs Homebrew (if needed), CLI tools, oh-my-zsh, and symlinks `.zshrc`,
   but provider credentials are deliberately **not** tracked here. Run `pi` and add each
   provider's API key/oauth on a new machine; keys live in `~/.pi/agent/auth.json`.
 - **Pi extensions**: live in the separate [pi-customizations](https://github.com/bsamek/pi-customizations)
-  repo, cloned to `~/src/pi-customizations` by `setup.sh` and referenced from `pi/settings.json`.
+  repo. `pi/settings.json` references it as a git package, so pi installs and updates its
+  own clone under `~/.pi/agent/git/` on startup — no manual step needed. `setup.sh` also
+  clones it to `~/src/pi-customizations`, which is the working copy to edit and push from.

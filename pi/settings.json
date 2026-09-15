@@ -1,6 +1,6 @@
 {
   "packages": [
-    "../../src/pi-customizations"
+    "git:github.com/bsamek/pi-customizations@main"
   ],
   "theme": "dark",
   "defaultProvider": "fireworks",
