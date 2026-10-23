@@ -13,7 +13,7 @@ fi
 
 # Install packages
 echo "Installing brew packages..."
-brew install zoxide direnv atuin tmux mosh zsh-autosuggestions
+brew install zoxide direnv fzf tmux mosh zsh-autosuggestions
 
 # Install oh-my-zsh if missing
 if [[ ! -d "$HOME/.oh-my-zsh" ]]; then

@@ -9,13 +9,14 @@ plugins=(git zoxide direnv)
 
 # PATH / Environment
 [[ -f "$HOME/.local/bin/env" ]] && . "$HOME/.local/bin/env"
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/go/bin:$PATH"
 
 # Load oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
-# Tool initialization (atuin — not available as omz plugin)
-eval "$(atuin init zsh)"
+# fzf: history search (Ctrl+R) and fuzzy file completion (**<Tab>)
+source <(fzf --zsh)
+export EDITOR="vim"
 
 # tmux: auto-attach on SSH login
 if [[ -n "$SSH_CONNECTION" && -z "$TMUX" ]]; then
@@ -53,3 +54,30 @@ reposync() {
     rsync -az --delete "$local_dir" "$host:$remote_dir"
   fi
 }
+
+# Read a secret from the macOS login keychain
+_kc() { security find-generic-password -a "$USER" -s "$1" -w 2>/dev/null; }
+
+# bun completions
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+export DOCKER_HOST="unix:///var/run/docker.sock"
+
+# opencode
+export OPENCODE_DISABLE_TERMINAL_TITLE=1
+export OPENCODE_SERVER_PASSWORD="$(_kc ZSHRC_OPENCODE_SERVER_PASSWORD)"
+opencode() {
+  print -n "\e]2;OpenCode | ${PWD:t}\a"
+  command opencode "$@"
+}
+alias oc='opencode'
+
+alias e='TERM=xterm-256color emacsclient -nw -a ""'
+alias ec='emacsclient -c -a ""'
+
+# Machine-local additions (work environment, per-machine paths). Deliberately
+# untracked: this repo is public, and that file holds work-only endpoints.
+[[ -f "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
