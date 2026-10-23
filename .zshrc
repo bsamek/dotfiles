@@ -78,6 +78,16 @@ alias oc='opencode'
 alias e='TERM=xterm-256color emacsclient -nw -a ""'
 alias ec='emacsclient -c -a ""'
 
+# Non-interactive shells (agents, CI) must never block on an editor or pager.
+# Interactive shells are untouched and keep vim. Env vars beat core.editor.
+if [[ ! -t 0 ]]; then
+  export GIT_EDITOR=true
+  export GIT_SEQUENCE_EDITOR=true
+  export GIT_MERGE_AUTOEDIT=no
+  export PAGER=cat
+  export GIT_PAGER=cat
+fi
+
 # Machine-local additions (work environment, per-machine paths). Deliberately
 # untracked: this repo is public, and that file holds work-only endpoints.
 [[ -f "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
