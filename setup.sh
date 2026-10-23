@@ -45,6 +45,11 @@ ln -sf "$DOTFILES_DIR/.gitconfig-work" "$HOME/.gitconfig-work"
 mkdir -p "$HOME/.pi/agent"
 ln -sf "$DOTFILES_DIR/pi/settings.json" "$HOME/.pi/agent/settings.json"
 
+# Herdr config. Herdr writes backups (config.toml.bak-*) beside the real file,
+# so keep the repo copy as the target of the symlink.
+mkdir -p "$HOME/.config/herdr"
+ln -sf "$DOTFILES_DIR/herdr/config.toml" "$HOME/.config/herdr/config.toml"
+
 # Ensure .zprofile has brew shellenv (needed for non-interactive shells)
 if [[ ! -f "$HOME/.zprofile" ]] || ! grep -q 'brew shellenv' "$HOME/.zprofile"; then
   echo "Adding brew shellenv to .zprofile..."
