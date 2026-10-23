@@ -1,21 +1,30 @@
 {
-  "packages": [
-    "git:github.com/bsamek/pi-customizations@main"
+  "packages": [],
+  "extensions": [
+    "~/src/pi-customizations/extensions/git-safety.ts",
+    "~/src/pi-customizations/extensions/notify.ts",
+    "~/src/pi-customizations/extensions/op-safety.ts",
+    "~/src/pi-customizations/extensions/session-summary.ts",
+    "~/src/pi-customizations/extensions/session-transcript.ts",
+    "~/src/pi-customizations/extensions/subagent/index.ts"
   ],
   "theme": "dark",
-  "defaultProvider": "fireworks",
-  "defaultModel": "accounts/fireworks/models/deepseek-v4p1-flash",
+  "defaultProvider": "fireworks-direct",
+  "defaultModel": "accounts/fireworks/models/deepseek-v4p1-flash-1017",
   "enabledModels": [
-    "github-copilot/claude-fable-5.1",
-    "github-copilot/claude-opus-5",
-    "github-copilot/gemini-3.8-flash",
-    "fireworks/accounts/fireworks/models/deepseek-v4p1-flash",
-    "fireworks/accounts/fireworks/models/glm-5p3-flash",
-    "github-copilot/gpt-5.6-terra",
-    "github-copilot/gpt-5.6-luna",
-    "github-copilot/gpt-6-astra"
+    "fireworks-direct/accounts/fireworks/models/deepseek-v4p1-flash-1017",
+    "github-copilot/gpt-6-luna",
+    "github-copilot/gpt-6-astra",
+    "github-copilot/claude-opus-5.5",
+    "github-copilot/gpt-6.1-sol",
+    "github-copilot/gemini-4-argon"
   ],
-  "defaultThinkingLevel": "high",
+  "defaultThinkingLevel": "low",
+  "modelThinkingLevels": {
+    "fireworks-direct/accounts/fireworks/models/deepseek-v4p1-flash-1017": "low",
+    "github-copilot/gpt-6.1-sol": "medium",
+    "github-copilot/claude-opus-5.5": "medium"
+  },
   "hideThinkingBlock": true,
   "tuiMode": "fullscreen",
   "fullscreenCopyOnSelect": true
