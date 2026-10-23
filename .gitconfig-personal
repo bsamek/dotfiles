@@ -1,6 +1,6 @@
 [user]
 	email = bsamek@users.noreply.github.com
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAHhn/8y7u/eIV3Uh8cebOmLklKZaHCO5QpWVwr8XcBk
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFc2j+uOByCNgv1s7nP2ZLapNQRgjZ60BDwTXHmRrGys
 [gpg]
 	format = ssh
 [gpg "ssh"]

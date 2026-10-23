@@ -34,6 +34,14 @@ ln -sf "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig"
 ln -sf "$DOTFILES_DIR/.gitconfig-personal" "$HOME/.gitconfig-personal"
 ln -sf "$DOTFILES_DIR/.gitconfig-work" "$HOME/.gitconfig-work"
 
+# Share Herdr preferences without syncing sockets, logs, or runtime state.
+mkdir -p "$HOME/.config/herdr"
+HERDR_CONFIG="$HOME/.config/herdr/config.toml"
+if [[ -e "$HERDR_CONFIG" && ! -L "$HERDR_CONFIG" ]]; then
+  mv "$HERDR_CONFIG" "$HERDR_CONFIG.backup.$(date +%Y%m%d%H%M%S).$$"
+fi
+ln -sf "$DOTFILES_DIR/herdr/config.toml" "$HERDR_CONFIG"
+
 # Ensure .zprofile has brew shellenv (needed for non-interactive shells)
 if [[ ! -f "$HOME/.zprofile" ]] || ! grep -q 'brew shellenv' "$HOME/.zprofile"; then
   echo "Adding brew shellenv to .zprofile..."

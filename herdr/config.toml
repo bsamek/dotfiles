@@ -1,0 +1,7 @@
+onboarding = false
+
+[ui.sidebar.agents.rows_by_agent]
+pi = [["state_icon", "machine", "workspace", "tab"], ["terminal_title_stripped"]]
+
+[keys]
+prefix = "ctrl+a"
