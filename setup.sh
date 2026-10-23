@@ -2,6 +2,7 @@
 set -euo pipefail
 
 DOTFILES_DIR="$HOME/src/dotfiles"
+PI_CUSTOMIZATIONS_DIR="$HOME/src/pi-customizations"
 
 # Install Homebrew if missing
 if ! command -v brew &>/dev/null; then
@@ -23,7 +24,12 @@ fi
 # Clone dotfiles if this script is being run standalone (e.g. curl | bash)
 if [[ ! -d "$DOTFILES_DIR" ]]; then
   echo "Cloning dotfiles..."
-  git clone git@github.com:brian/dotfiles.git "$DOTFILES_DIR"
+  git clone git@github.com:bsamek/dotfiles.git "$DOTFILES_DIR"
+fi
+
+if [[ ! -d "$PI_CUSTOMIZATIONS_DIR" ]]; then
+  echo "Cloning pi customizations..."
+  git clone git@github.com:bsamek/pi-customizations.git "$PI_CUSTOMIZATIONS_DIR"
 fi
 
 # Symlink dotfiles
@@ -33,6 +39,11 @@ ln -sf "$DOTFILES_DIR/.tmux.conf" "$HOME/.tmux.conf"
 ln -sf "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig"
 ln -sf "$DOTFILES_DIR/.gitconfig-personal" "$HOME/.gitconfig-personal"
 ln -sf "$DOTFILES_DIR/.gitconfig-work" "$HOME/.gitconfig-work"
+
+# Pi settings (package list, model defaults, TUI prefs). Pi writes through the
+# symlink, so changes made in the TUI land back in this repo.
+mkdir -p "$HOME/.pi/agent"
+ln -sf "$DOTFILES_DIR/pi/settings.json" "$HOME/.pi/agent/settings.json"
 
 # Share Herdr preferences without syncing sockets, logs, or runtime state.
 mkdir -p "$HOME/.config/herdr"

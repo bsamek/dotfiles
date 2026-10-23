@@ -1,7 +1,43 @@
 onboarding = false
 
+[ui.sidebar.agents]
+row_gap = 0
+rows = [
+  ["state_icon", { token = "agent", bold = true }, "workspace", "tab"],
+  [{ token = "terminal_title_stripped", bold = true }],
+]
+
 [ui.sidebar.agents.rows_by_agent]
 pi = [["state_icon", "machine", "workspace", "tab"], ["terminal_title_stripped"]]
+omp = [
+  [{ token = "$st_working", bold = true },
+   { token = "$st_done", bold = true },
+   { token = "$st_idle", bold = true },
+   { token = "$st_blocked", bold = true },
+   { token = "agent", bold = true },
+   { token = "$zuiio", bold = true },
+   { token = "$tolom", bold = true },
+   { token = "$zer", bold = true },
+   { token = "$onoo", bold = true },
+   { token = "$herdr", bold = true },
+   { token = "$omp", bold = true },
+   { token = "$archive", bold = true },
+   { token = "$horoscope", bold = true },
+   { token = "$misc", bold = true }],
+  [{ token = "terminal_title", bold = true }],
+]
+
+[ui.sidebar.spaces]
+row_gap = 0
+rows = [
+  ["state_icon",
+   { token = "$name", bold = true }],
+  [{ token = "branch", bold = true },
+   { token = "git_status", bold = true },
+   { token = "$dir", bold = true },
+   { token = "$panes", bold = true }],
+]
 
 [keys]
+# Prefix key to enter prefix mode (default: "ctrl+b")
 prefix = "ctrl+a"
