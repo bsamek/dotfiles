@@ -59,7 +59,6 @@ export DOCKER_HOST="unix:///var/run/docker.sock"
 # opencode
 export PATH="$HOME/.opencode/bin:$PATH"
 export OPENCODE_DISABLE_TERMINAL_TITLE=1
-export OPENCODE_SERVER_PASSWORD="$(_kc ZSHRC_OPENCODE_SERVER_PASSWORD)"
 opencode() {
   print -n "\e]2;OpenCode | ${PWD:t}\a"
   command opencode "$@"
