@@ -1,5 +1,4 @@
 {
-  "packages": [],
   "extensions": [
     "~/src/pi-customizations/extensions/git-safety.ts",
     "~/src/pi-customizations/extensions/notify.ts",
@@ -9,22 +8,6 @@
     "~/src/pi-customizations/extensions/subagent/index.ts"
   ],
   "theme": "dark",
-  "defaultProvider": "fireworks-direct",
-  "defaultModel": "accounts/fireworks/models/deepseek-v4p1-flash-1017",
-  "enabledModels": [
-    "fireworks-direct/accounts/fireworks/models/deepseek-v4p1-flash-1017",
-    "github-copilot/gpt-6-luna",
-    "github-copilot/gpt-6-astra",
-    "github-copilot/claude-opus-5.5",
-    "github-copilot/gpt-6.1-sol",
-    "github-copilot/gemini-4-argon"
-  ],
-  "defaultThinkingLevel": "low",
-  "modelThinkingLevels": {
-    "fireworks-direct/accounts/fireworks/models/deepseek-v4p1-flash-1017": "low",
-    "github-copilot/gpt-6.1-sol": "medium",
-    "github-copilot/claude-opus-5.5": "medium"
-  },
   "hideThinkingBlock": true,
   "tuiMode": "fullscreen",
   "fullscreenCopyOnSelect": true

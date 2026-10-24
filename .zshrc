@@ -18,19 +18,9 @@ source $ZSH/oh-my-zsh.sh
 source <(fzf --zsh)
 export EDITOR="vim"
 
-# tmux: auto-attach on SSH login
-if [[ -n "$SSH_CONNECTION" && -z "$TMUX" ]]; then
-  tmux new-session -A -s main
-fi
+# Multiplexers are launched manually; SSH logins stay plain shells.
 
 # Aliases
-tm() {
-  if [[ "$TERM_PROGRAM" == "iTerm.app" ]]; then
-    tmux -CC new-session -A -s main
-  else
-    tmux new-session -A -s main
-  fi
-}
 alias mini='mosh --server=/opt/homebrew/bin/mosh-server mini'
 alias cc='claude --allow-dangerously-skip-permissions --chrome'
 
@@ -67,6 +57,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export DOCKER_HOST="unix:///var/run/docker.sock"
 
 # opencode
+export PATH="$HOME/.opencode/bin:$PATH"
 export OPENCODE_DISABLE_TERMINAL_TITLE=1
 export OPENCODE_SERVER_PASSWORD="$(_kc ZSHRC_OPENCODE_SERVER_PASSWORD)"
 opencode() {

@@ -13,7 +13,16 @@ fi
 
 # Install packages
 echo "Installing brew packages..."
-brew install zoxide direnv fzf tmux mosh zsh-autosuggestions
+brew install zoxide direnv fzf mosh zsh-autosuggestions python3
+
+# Direct installs update through herdr, not Homebrew.
+export PATH="$HOME/.local/bin:$PATH"
+if command -v herdr &>/dev/null; then
+  herdr update
+else
+  curl -fsSL https://herdr.dev/install.sh | sh
+fi
+herdr integration install pi
 
 # Install oh-my-zsh if missing
 if [[ ! -d "$HOME/.oh-my-zsh" ]]; then
@@ -35,15 +44,16 @@ fi
 # Symlink dotfiles
 echo "Symlinking dotfiles..."
 ln -sf "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
-ln -sf "$DOTFILES_DIR/.tmux.conf" "$HOME/.tmux.conf"
+# Remove only the obsolete link owned by this repo.
+if [[ -L "$HOME/.tmux.conf" && "$(readlink "$HOME/.tmux.conf")" == "$DOTFILES_DIR/.tmux.conf" ]]; then
+  rm "$HOME/.tmux.conf"
+fi
 ln -sf "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig"
 ln -sf "$DOTFILES_DIR/.gitconfig-personal" "$HOME/.gitconfig-personal"
 ln -sf "$DOTFILES_DIR/.gitconfig-work" "$HOME/.gitconfig-work"
 
-# Pi settings (package list, model defaults, TUI prefs). Pi writes through the
-# symlink, so changes made in the TUI land back in this repo.
-mkdir -p "$HOME/.pi/agent"
-ln -sf "$DOTFILES_DIR/pi/settings.json" "$HOME/.pi/agent/settings.json"
+# Pi settings stay machine-local. Merge only shared extensions/UI preferences.
+python3 "$DOTFILES_DIR/pi/apply-settings.py"
 
 # Share Herdr preferences without syncing sockets, logs, or runtime state.
 mkdir -p "$HOME/.config/herdr"
