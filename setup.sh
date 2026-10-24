@@ -18,7 +18,11 @@ brew install zoxide direnv fzf mosh zsh-autosuggestions python3
 # Direct installs update through herdr, not Homebrew.
 export PATH="$HOME/.local/bin:$PATH"
 if command -v herdr &>/dev/null; then
-  herdr update
+  if [[ "${HERDR_ENV:-}" == "1" ]]; then
+    echo "Inside Herdr: skipping self-update; run herdr update after detaching."
+  else
+    herdr update
+  fi
 else
   curl -fsSL https://herdr.dev/install.sh | sh
 fi
