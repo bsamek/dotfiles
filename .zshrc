@@ -23,6 +23,7 @@ export EDITOR="vim"
 # Aliases
 alias mini='mosh --server=/opt/homebrew/bin/mosh-server mini'
 alias cc='claude --allow-dangerously-skip-permissions --chrome'
+alias h='herdr'
 
 # zsh-autosuggestions (homebrew)
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
